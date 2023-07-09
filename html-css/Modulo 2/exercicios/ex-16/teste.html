@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style> 
+        *{
+            height: 100%;
+        }
+        .principal{
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(160deg, #6F11FF 10%, #FF00D0, #FE015B,#FF4A01,#FFB700);
+            display: flex; /* define o container como flexível */
+            justify-content: center; /* centraliza horizontalmente a div interna */
+            align-items: center; /* centraliza verticalmente a div interna */
+
+        /*Um experimento interessante é com a definição
+
+            background-attachment: fixed; 
+        
+        dentro da div, onde o gradiente fica fixo ao tamanho da tela, mas só é visivel o gradiente onde está a div
+        */
+        }
+        .listra{
+            height: 150px;
+            width: 150px;
+            background-color: white;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <div class="listra">
+        </div>
+    </div>
+</body>
+</html>

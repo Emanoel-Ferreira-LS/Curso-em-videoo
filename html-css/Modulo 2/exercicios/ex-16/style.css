@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+*{
+    /*height: 100%;*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, #0BC9D4 30%,#0CF58B);
+}
+main{
+    background-color: white;
+    width: 600px;
+    padding: 10px;
+    margin: auto;/*automaticamente, vai centralizar independente do tamanho da tela*/
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px #078d94ce;/*mesma cor de fundo; transparencia diminuida; efeito de monocromia: abaixa o ponto da cor, ficando o mesmo tom porem mais escuro*/
+    /*Sombra:
+            
+        box-shadow: 1ºparametro 2ºparametro 3ºparametro 4ºparametro; 
+    
+    -1ºparametro: o quanto essa sombra vai andar para o lado
+    -2ºparametro: o quanto essa sombra vai andar para baixo
+    -3ºparametro: o quanto essa sombra vai espalhar
+    -4ºparametro: cor e transparência
+    */
+}
+
+h1{
+    color: #840CF7;
+    text-shadow: 1px 1px 2px #5709a0c2;   /*mesmo principio do box-shadow*/
+}
+
+h2{
+    color: #006DEB;
+}
+
+p{
+    text-align: justify;
+}

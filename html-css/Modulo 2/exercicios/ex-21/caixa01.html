@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1{
+            background-color: aquamarine;
+            height: 300px;
+            width: 300px;
+
+            border-width: 5px;
+            border-style: solid;
+            border-color: black; 
+            /*Forma simplificada:
+
+                border: 10px solid black
+
+            */       
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /*Forma simplificada:
+
+                padding: 10px 10px 10px 10px
+            
+            nessa ordem(só lembrar das horas do relógio): 
+
+                padding: topo direita baixo esquerda;
+
+            Ou, no caso dos valores serem o mesmo, só especifica uma vez:
+
+                padding: 10px;
+
+            Quando se coloca apenas dois valores, o primeiro valor se refere à cima e baixo, e o segundo à direita e esquerda:
+
+                padding: 10px 20px;
+
+                padding: topo/baixo direita/esquerda
+
+            */ 
+
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+
+            /*Simplificando:
+
+                 margin: topo direita baixo esquerda;
+
+                margin:auto;   //centraliza
+
+                margin: topo auto baixo auto;    //calcula automaticamente as margens e tambem centraliza.
+
+            Se os valomargin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;res forem os mesmos: 
+
+                margin:10px; 
+            */
+
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: darkmagenta;
+
+            /*Simplificando:
+                outline: 5px dashed darkmagenta;
+            */
+
+            /*display: inline;*/ 
+            /*Por padrão o h1 é um elemento box-level, mas com essa alteração ele fica inline.
+            Fazendo isso, não posso definir o valor da altura e largura pois elementos do tipo inline-level ocupam o espaço do conteúdo */
+
+        }
+
+        .p1{
+            border-width: 4px;
+            border-style: solid;
+            border-color: red;
+        }
+
+        .p2{
+            border-width: 4px;
+            border-top-style: dashed;
+            border-right-style: dotted;
+            border-bottom-style: double;
+            border-left-style:groove ;
+            border-color: red;
+            padding: 10px;
+            padding-left: 15px;
+        }
+
+        .p3{
+            border-width: 3px;
+            border-style: dotted;
+            border-color: red;
+        }
+
+        .p4{
+            border-width: 3px;
+            border-style: double;
+            border-color: red;
+        }
+
+        .p5{
+            border-width: 3px;
+            border-style: groove;
+            border-color: red;
+        }
+
+        a{
+            display: block;
+            /*Por padrão um link é um elemento inline-level, mas com essa alteração ele fica em bloco*/
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>
+        Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>.Vamos ver como isso funciona na prática.
+    </p>
+    <p class="p1">
+        Esses são alguns exemplos de estilos de bordas.
+    </p>
+    <p class="p2">
+        Esses são alguns exemplos de estilos de bordas.
+    </p>
+    <p class="p3">
+        Esses são alguns exemplos de estilos de bordas.
+    </p>
+
+    <p class="p4">
+        Esses são alguns exemplos de estilos de bordas.
+    </p>
+
+    <p class="p5">
+        Parágrafos também são exemplos de box-level, Esses são alguns exemplos de estilos de bordas.
+        <br>
+        Esse por exemplo é um estilo mais 3D.
+    </p>
+</body>
+</html>

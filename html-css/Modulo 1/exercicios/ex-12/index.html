@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+</head>
+<body>
+    <h1>Adicionando videos no site</h1>
+    <h2>Hospedagem interna</h2>
+    <p>baixe do site pexels</p>
+    <video src="midia/Pexels Videos 1580455.mp4" width="500" controls muted autoplay></video>
+      <!--muted autoplay:  assim que a página é carregada o video se inicializa automaticamente porem com o som mutado-->
+    
+    <p>código:</p>
+    <code>
+        <pre>
+            &lt;video src="midia/Pexels Videos 1580455.mp4" width="500" controls muted autoplay&gt;&lt;/video&gt;
+            <strong>&lt;!--muted autoplay:  assim que a página é carregada o video se inicializa automaticamente porém com o som mutado--&gt;</strong>
+        </pre>
+    </code>
+    <hr>
+
+    <p>Outra forma</p>
+    <video controls width="500">
+        <source src="midia/Pexels Videos 1580455.mp4" type="video/mp4">
+    <!--Supondo que eu tenho outros tipos de video:-->
+        <source src="midia/Pexels Videos 1580455.m4v" type="video/mp4">
+        <source src="midia/Pexels Videos 1580455.webm" type="video/webm">
+        <source src="midia/Pexels Videos 1580455.ogv" type="video/ogg">
+    <!--Ele vai tentar carregar de cima pra baixo, senão conseguir vai exibir:-->
+        <p>Infelizmente seu navegador não é compativel com videos</p>
+    </video>
+
+    <p>código:</p>
+    <code>
+        <pre>
+            &lt;video controls width="500"&gt;
+
+                &lt;source src="midia/Pexels Videos 1580455.mp4" type="video/mp4"&gt;
+
+            <strong>&lt;!--Supondo que eu tenho outros tipos de video:--&gt;</strong>
+
+                &lt;source src="midia/Pexels Videos 1580455.m4v" type="video/mp4"&gt;
+                &lt;source src="midia/Pexels Videos 1580455.webm" type="video/webm"&gt;
+                &lt;source src="midia/Pexels Videos 1580455.ogv" type="video/ogg"&gt;
+                
+            <strong>&lt;!--Ele vai tentar carregar de cima pra baixo, senão conseguir vai exibir:--&gt;</strong>
+
+                &lt;p&gt;Infelizmente seu navegador não é compativel com videos&lt;/p&gt;
+                
+            &lt;/video&gt;
+        </pre>
+    </code>
+    <hr>
+
+    <h1>Vídeo em hospedagem externa</h1>
+    <h2>Vídeo do You tube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/d1ObksI9_Us" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <p>Para fazer isso é só ir no video do youtube,  clicar em compartilhar, depois em incorporar, copiar o código exibido e colar no projeto do site</p>
+
+    <h2>Videos do vimeo</h2>
+    <iframe src="https://player.vimeo.com/video/380744562?h=406cf89b88&autoplay=1&color=FF0000" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+
+  <p>Para fazer isso, é da mesma forma. É só ir no video do vimeo, clicar em compartilhar, escolher as configurações e depois incorporar: copiar o código exibido e colar no projeto do site</p>
+
+</body>
+</html>

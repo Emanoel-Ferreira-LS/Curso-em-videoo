@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+body{
+    background-color: #7fffd4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    align-content: center;
+}
+h1{
+    color: darkmagenta;
+    text-align: center;
+    justify-content: center;
+    background-color: #add7e6;
+}
+h2{
+    color: rgb(182, 0, 0);
+    text-align: center;
+}
+p{
+    text-align: justify;
+    text-align: center;
+}
+img{
+    width: 300px;
+}
+iframe{
+    margin-left: 27%;
+}
+.container{
+    text-align :center;
+    margin-right: 8%;
+}
+.botao-voltar{
+    width: 8%;
+    margin-left: 47%;
+    margin-right: -50%;
+}
+.perfil-pagina-principal{
+    width: 50px;
+    height: 50px;
+    margin-top: -37.3%;
+    margin-left: 2%;
+
+}
+.foto-perfil{
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.title{
+    background-color: #add7e6;
+    height: 55px;
+    width: 100%;
+}
+.perfil{
+    background-color: #2decad;
+    width: 90%;
+    border-radius: 1%;
+    margin-left: 5%;
+}
+.perfil img{
+    vertical-align: middle;
+    width: 300px;
+    height: 300px;
+    margin-left: 2%;
+    display: inline-block;
+}
+.informacoes-pessoais {
+    width: 700px;
+    height: 300px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 1%;
+  }
+
+  .informacoes-pessoais p {
+    text-align: left;
+    font-family: sans-serif;
+  }
+  .redes-sociais{
+    width: 400px;
+    height: 40px;
+    align-items: center;
+  }
+
+  .redes-sociais img{
+    height: 90%;
+    width: 9%;
+    border-radius: 30%;
+  }
+  .redes-sociais a{
+    text-decoration: none;
+  }
+
+ 
+  
+
+  
+  
+
+
+
+
+
+
+
+

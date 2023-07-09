@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+   <h1>Trabalhando com listas</h1>
+   <h2>listas ordenadas - a ordem faz diferença</h2>
+   <h3>tag &lt;ol&gt; / &lt;li&gt;</h3>
+   <ol>
+    <li>acordar</li>
+    <li>Escovar</li>
+    <li>Tomar café</li>
+    <li>Ir para o trabalho
+    <li>Almoçar</li>
+    <li>Ir para Faculdade</li>
+    <li>jantar</li>
+    <!-- o </li> de fechamento é opcional-->
+   </ol>
+   
+
+   <h4>Parametros type="" e start=""</h4>
+   <h5>type="A" start="3"</h5>
+    <ol type="A" start="3">
+        <li>Tomar café</li>
+        <li>Ir para o trabalho
+        <li>Almoçar</li>
+        <li>Ir para Faculdade</li>
+        <li>jantar</li>
+    </ol>
+    <h5>type="a" start="3"</h5>
+    <ol type="a" start="3">
+        <li>Tomar café</li>
+        <li>Ir para o trabalho
+        <li>Almoçar</li>
+        <li>Ir para Faculdade</li>
+        <li>jantar</li>
+    </ol>
+   <h5>type="I" start="3"</h5>
+    <ol type="I" start="3">
+        <li>Tomar café</li>
+        <li>Ir para o trabalho
+        <li>Almoçar</li>
+        <li>Ir para Faculdade</li>
+        <li>jantar</li>
+    </ol>
+    <h5>type="i" start="3"</h5>
+    <ol type="i" start="3">
+        <li>Tomar café</li>
+        <li>Ir para o trabalho
+        <li>Almoçar</li>
+        <li>Ir para Faculdade</li>
+        <li>jantar</li>
+        <!-- o </li> de fechamento é opcional-->
+       </ol>
+
+
+
+    <h2>Listas não ordenadas - a ordem não importa</h2>
+    <h3>tag &lt;ul&gt; / &lt;li&gt;</h3>
+    <ul>
+        <li>Pão</li>
+        <li>leite</li>
+        <li>Tomate</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+    </ul>
+
+    <h2>Aninhamento - junção da ol e ul</h2>
+    <h3>tag &lt;ul&gt; dentro de &lt;ul&gt; </h3>
+    <h4>type="a"  dentro de type="1"    </h4>
+    <p>linguagens:</p>
+    <ol type="1">
+        <li>Estudei</li>
+            <ol type="a">
+                <li>Java</li>
+                <li>React Native</li>
+                <li>HTML e CSS</li>
+            </ol>
+        <li>Vou estudar</li>
+            <ol type="a" start="4">
+                <li>JavaScript</li>
+                <li>Phyton</li>
+                <li>PHP</li>
+            </ol>
+    </ol>
+
+    <h3>tag &lt;ul&gt; dentro de &lt;ol&gt; </h3>
+    <h4>ul dentro de type="1"    </h4>
+    <p>linguagens:</p>
+    <ol type="1">
+        <li>Estudei</li>
+            <ul>
+                <li>Java</li>
+                <li>React Native</li>
+                <li>HTML e CSS</li> 
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                </ul>
+            </ul>
+        <li>Vou estudar</li>
+            <ul>
+                <li>JavaScript</li>
+                <li>Phyton</li>
+                <li>PHP</li>
+            </ul>
+    </ol>
+
+    <h2>Lista de Definição</h2>
+    <h3>&lt;dt&gt; / &lt;dd&gt;</h3>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para conteudo de um site</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para design de um site</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de progamação para interatividade de um site</dd>

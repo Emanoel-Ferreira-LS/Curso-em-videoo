@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+   <h1>Usando links externos</h1>
+   <h2>TAG &LT;a&gt; com parametros target="_blank" e rel="external"</h2>
+   <p>Você pode acessar o <a href="https://github.com/gustavoguanabara" target="_blank" rel="external">meu repositório</a> publico no github</p> 
+
+   <h1>Usando links internos</h1>
+   <p>Essa é a pagina principal, para acessar a segunda página <a href="pag002.html" rel="next">clique aqui</a></p> <!--rel="next"    link pra avançar-->
+
+   <p>Essa é a pagina principal, para acessar a pagina de noticias <a href="noticias/pag003.html" target="_self" rel="next">clique aqui</a></p> <!--target="_self"      quer dizer na propria aba-->
+   <h2>Links patrocinados</h2>
+   <h3>parametro rel="nofollow" (não siga)</h3>
+   <p>este é um oferecimento de <a href="https://www.hostnet.com.br" target="_blank" rel="nofollow">Hostnet</a></p> <!--rel="nofollow"  quando você diz pros mecanismos de busca que vocẽ não da um aval pra aquele site-->
+
+
+   <h1>links para download</h1>
+   <ul>
+        <li><a href="livros/ENSAIO - Memórias Póstumas de Brás Cubas - Emanoel Ferreira.pdf">abrir livro em pdf</a></li> <!--aqui ele só abre-->
+
+        <li><a href="livros/ENSAIO - Memórias Póstumas de Brás Cubas - Emanoel Ferreira.pdf" download="meu livro.pdf" type="application/pdf">download livro em pdf</a></li>
+        <!--só abre tambem, mas da pra fazar download clicando no botão de download no pdf  -->
+           
+        <li><a href="arquivos/AppPlantas3.zip" download="meu arquivo.zip" type="application/zip" >baixar livro zip</a></li> <!--href="#" quer dizer link vazio-->
+   </ul>
+
+
+   <p><a href="https://www.iana.org/assignments/media-types/media-types.xhtml">lista dos tipos de arquivos: https://www.iana.org/assignments/media-types/media-types.xhtml</a></p>
+</body>
+</html>

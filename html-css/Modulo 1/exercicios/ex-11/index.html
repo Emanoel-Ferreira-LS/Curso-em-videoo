@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens dinamicas</title>
+</head>
+<body>
+    <h1>Imagens Dinamicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexivel">
+    </picture>
+
+    <p>Aqui vai outro exemplo de imagem dinamica</p>
+
+    <picture>
+        <source media="(max-width:750px)" srcset="imagens/emanoel-p.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imagens/emanoel-m.png" type="image/png">
+        <img src="imagens/emanoel-g.png" alt="Foto de uma pessoa - imagem dinamica">
+    </picture>
+
+    <h1>Audio no HTML</h1>
+    <p>Exemplos de maneiras colocar audio no HTML</p>
+
+    <p><code>Deserto - Maria Marçal:</code>
+         <a href="https://youtu.be/0H6WYzM0TMg" target="_blank">link do video original</a></p>
+    <audio src="midia/deserto-maria_marçal.mp3" controls autoplay ></audio>
+    <audio src=""></audio>
+
+    <audio preload="metadata" controls>
+        <source src="midia/deserto-maria_marçal.mp3" type="audio/mpeg">
+        <!--Supondo que temos outros tipos de arquivos-->
+        <source src="midia/deserto-maria_marçal.ogg" type="audio/ogg">
+        <source src="midia/deserto-maria_marçal.wav" type="audio/wav"><!--wav é mais pesado-->
+
+        <!--Ele vai tentar carregar os aquivos de baixo pra cima, caso não consiga ele exibirá:-->
+        <p>Infelizmente não foi possivel exibir o audio </p>
+    </audio>
+
+    <hr>
+    <p>Aqui vai o código do utlizado para colocar os audios:</p>
+    <hr>
+
+    <code>
+        <pre>
+            &lt;p&gt;&lt;code&gt;Deserto - Maria Marçal:&lt;/code&gt;
+            &lt;a href="https://youtu.be/0H6WYzM0TMg" target="_blank"&gt;link do video original&lt;/a&gt;&lt;/p&gt;
+            
+            &lt;audio src="midia/deserto-maria_marçal.mp3" controls autoplay&gt;&lt;/audio&gt;
+       
+              &lt;audio preload="metadata" controls&gt;
+              &lt;source src="midia/deserto-maria_marçal.mp3" type="audio/mpeg"&gt;
+            
+            <strong>&lt;!--Supondo que temos outros tipos de arquivos--&gt;</strong>
+
+              &lt;source src="midia/deserto-maria_marçal.ogg" type="audio/ogg"&gt;
+              &lt;source src="midia/deserto-maria_marçal.wav" type="audio/wav"&gt;    <strong>&lt;!--wav é mais pesado--&gt;</strong>
+            
+            <strong>&lt;!--Ele vai tentar carregar os aquivos de baixo pra cima, caso não consiga ele exibirá:--&gt;</strong>
+
+              &lt;p&gt;Infelizmente não foi possivel exibir o audio &lt;/p&gt;
+            &lt;/audio&gt;
+        </pre>
+    </code>
+
+
+    
+</body>
+</html>

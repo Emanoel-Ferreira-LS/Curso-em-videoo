@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <h2>Alguns comandos: codigos fontes / pre-formatação</h2>
+    <h3>tags &lt;pré&gt; e &lt;code&gt;</h3>
+    
+    <p>O comando <code>document.getById('teste')</code> é escrito em javaScript &nbsp; &nbsp;&lt;= Esse é um exemplo de fonte mono-espaçada, que usa a tag &lt;code&gt; ideal para códigos como esse por exemplo</p>
+
+    <pre>
+            <p>
+                public static void main(String[] args) throws SQLException {
+                Connection connection = new ConnectionFactory().getConnection();
+                System.out.println("Conexão aberta!");
+                connection.close();
+           </p>
+    </pre>
+    <p>Comando &lt;pre&gt; implementa a indentação no código, ou seja, considera toda organização: espaços, quebras de linhas, etc</p>
+     <!--Uma dica pra organizar um código, é selecionar todo o trexo que deseja mover, e apertar as teclas shift + tab para mover o codigo pra traz e tab pra movelo pra frente dentro do vs code-->
+
+     <h2>Citações simples</h2>
+     <h3>tag &lt;q&gt;</h3>
+     <p>Como diria um pai de um amigo: <q>o computador é um burro muito rápido</q></p>
+     
+     <h2>Citações completas</h2>
+     <h3>tag &lt;lockquote&gt;</h3>
+     <p>segundo lolita:</p>
+
+     <blockquote cite="https://papodehomem.com.br/20-paragrafos-fodas-que-te-fazem-querer-ler-o-livro-inteiro-agora/">
+        “Um dia removi do carro, e depois destruí, todo uma cúmulo de revistas para adolescentes. Devem conhecer o tipo. Em matéria emocional, a Idade da Pedra; atualizada, ou pelo menos miceniana, em matéria de higiene. Uma bela e maduríssima atriz com cílios imensos e o lábio inferior carnudo e muito rubro, afirmando que usava uma certa marca de xampu. Anúncios e modas. As jovens estudantes adoram a profusão das saias plissadas… A menos que seja bem mais velho ou muito importante, o cavalheiro deve sempre tirar as luvas antes de tomar a mão…Facilite um novo romance usando o novo corpete para uma barriga lisa…O enigma matrimonial entre Fulano e Beltrana vem exaurindo às línguas."
+     </blockquote>
+     
+     <p>tag &lt;lockquote&gt; serve para incluir citações completas, onde pode ser usado o parametro <strong>cite=""</strong> com o link da origem da citação sendo incluida nesse parametro</p>
+
+     <h2>Abreviações</h2>
+     <h3>tag &lt;abbr&gt;</h3>
+     <p>Essa é a aula de <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+     <p>nessa tag é possivel passar no parametro da tag &lt;abbr&gt; o significado da abreviação e quando passa o mause em cima do texto na pagina ele vai mostrar o significado</p>
+
+     <h2>Texto invertido</h2>
+     <p>Ex: Estou aprendendo HTML e CSS</p> 
+     <h3>tag com parametro &lt;bdo dir="rtl"&gt;</h3>
+     <p><bdo dir="rtl">Estou aprendendo HTML e CSS</bdo></p>
+     <h3>Com parametro dir="ltr" </h3>
+     <p><bdo dir="ltr">Estou aprendendo HTML e CSS</bdo></p>
+</body>
+</html>

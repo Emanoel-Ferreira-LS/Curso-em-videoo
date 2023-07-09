@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style> 
+        *{
+            height: 100%;
+        }/*Configurações globais das CSS*/
+
+        body{
+            /*Função interna:
+                linear-gradient( direção, cores, cores, cores, ...);*/
+            background-image: linear-gradient(160deg, #6F11FF 10%, #FF00D0, #FE015B,#FF4A01,#FFB700);
+            /*Outras alternativas:
+                background-image: linear-gradient(to right, white, blue);
+                background-image: linear-gradient(to left, white, blue);
+                background-image: linear-gradient(to top, white, blue);
+                background-image: linear-gradient(to bottom, white, blue);
+            
+            Usando graus:
+
+                background-image: linear-gradient(90deg, white, blue);
+                background-image: linear-gradient(-90deg, white, blue);
+                background-image: linear-gradient(circle, #6F11FF, #FF00D0, #FE015B,#FF4A01,#FFB700);
+
+            Adicionado %
+
+                background-image: linear-gradient(160deg, #6F11FF 10%, #FF00D0, #FE015B,#FF4A01,#FFB700);
+
+            */
+            background-attachment: fixed; /*Fundo fixo*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente</h1>
+</body>
+</html>

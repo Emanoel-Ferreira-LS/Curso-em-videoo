@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores em CSS</title>
+</head>
+<body>
+    <h1>Exemplo de cores</h1>
+    <h2 style="background-color: blue; color:white">Representação por nome</h2>
+    <p>blue, red, Yellow, etc </p>
+        
+    <h2 style="background-color: #0000ff; color: #ffffff">Representação por exadecimal</h2>
+    <p>Decimal: 0 1 2 3 4 5 6 7 8 9 (10 digitos) </p>
+    <p>Hexadecimal: 0 1 2 3 4 5 6 7 8 9 A B C D E F  (16 digitos)</p>
+    <p>É representado da seginte forma(cor azul):
+        <br><code>#0000ff;</code>
+    </p>
+
+    <h2 style="background-color: rgb(0,0,255); color:rgb(255,255,255)">Representação RGB</h2>
+    <p>RGB: Red, Green, Blue</p>
+    <p> É representado da seguinte forma: <br>  <code>rgb(quant. de vermelho, quant. de verde, quant. de azul);</code></p>
+    <p>Exemplo(cor azul):
+        <br>  <code>rgb(0,0,255);</code>
+    </p>
+    <h2 style="background-color: hsl(240,100%,50%); color:hsl(0,0%,100%)">Representação po HSL</h2>
+    <p>HSL: Hue, Sturation, Luminosity (Matriz,saturação e luminosidade)/p>
+    <p>É representado da seguinte forma(cor azul):
+        <br><code>hsl(240,100%,50%)</code>
+    </p>
+
+    <h2 style="background-color: #0000ff; color:hsl(0,0%,100%)">Transparencia (#00000000, rgba e hsla)</h2>
+    <h3 style="background-color: #0000ff80;">Azul com 50% de transparencia</h3>
+
+    <p><code>#0000ff80;</code></p>
+
+    <p><code>rgba(0, 0, 255, 0.5);</code> </p>
+
+    <p><code>hsla(240, 100%, 50%, 0.5);</code></p>
+
+    <p>No hexadecimal aumenta mais dois digitos correspondentes à transparencia
+        <br>O rgb passa a ser rgba e o hsl, hsla, onde o "a" significa "alfa", que se refere a transparencia, e que possui um valor de 0 à 1. 
+    </p>
+
+</body>
+</html>
