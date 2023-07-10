@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pergunta</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-image: linear-gradient(160deg, rgb(85, 55, 255), rgb(252, 104, 252), rgb(248, 0, 0));
+        background-attachment: fixed;
+    }
+
+    h1 {
+        margin-top: 70px;
+        font-size: 50px;
+        color: white;
+    }
+    #enviarEmail {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 50px;
+    border-radius: 20px;
+    border: none;
+    transition: 0.2s;
+    background-color: rgba(255, 255, 255, 0.815);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.192);
+    }
+    #meuBotao {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    font-size: 50px;
+    border-radius: 20px;
+    border: none;
+    transition: 0.2s;
+    background-color: rgba(255, 255, 255, 0.815);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.192);
+    }
+    #pergunta{
+        font-size: 50px;
+        color: white;
+    }
+    .escondido{
+        display: none;
+    }
+    .mensagem{
+        font-size: 50px;
+        color: black;
+        margin: auto;
+        width: 70%;
+        background-color: rgba(240, 248, 255, 0.767);
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.192);
+        margin-bottom: 40px;
+    }
+    a{
+        font-size: 40px;
+        text-decoration: none;
+        color: rgb(209, 14, 63);
+    }
+    a:hover{
+        color: black;
+    }
+
+
+</style>
+<body>
+    <h1>Tenho uma Mensagem especial...</h1>
+    <div class="escondido">
+    <p id="pergunta">Voce quer namorar comigo?😊</p>
+        <button id="enviarEmail">Sim</button>
+        <button id="meuBotao">Não</button>
+    </div>
+
+    <div class="mensagem">
+        Mensagem
+    </div>
+
+    <a href="pergunta.html">Clique Aqui</a>
+
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        document.getElementById('enviarEmail').addEventListener('click', function() {
+            // Configuração do EmailJS
+            emailjs.init('XvDWZSc9f9lyla8YI');
+
+            // Parâmetros do email
+            var params = {
+                to_email: 'emanoelfls.dev@gmail.com', // Email do destinatário
+                message: 'Você foi comtemplado com um SIM!! Alegre-se, festeje esse momento unico em sua vida! Deus é fiel! "Aquilo que parecia impossiiivel, aquilo que parecia não ter saiida..."'
+                 // Mensagem a ser enviada
+            };
+
+            // Envio do email
+            emailjs.send('service_29f40pz', 'template_0jpsy5m', params)
+                .then(function() {
+                    alert('Boa escolha!😊❤️Sua resposta foi enviada!');
+                }, function(error) {
+                    console.error('Erro ao enviar o email:', error);
+                });
+        });
+
+        document.getElementById('meuBotao').addEventListener('click', function() {
+        var botao = document.getElementById('meuBotao');
+
+        // Defina a nova posição do botão
+        var novaPosicaoTop = Math.random() * (window.innerHeight - botao.offsetHeight);
+        var novaPosicaoLeft = Math.random() * (window.innerWidth - botao.offsetWidth);
+
+        // Aplique a nova posição ao estilo do botão
+        botao.style.top = novaPosicaoTop + 'px';
+        botao.style.left = novaPosicaoLeft + 'px';
+    });
+    </script>
+</body>
+</html>
+
