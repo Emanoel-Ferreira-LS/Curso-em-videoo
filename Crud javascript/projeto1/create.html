@@ -1,0 +1,56 @@
+<form>
+    <input placeholder="digite seu post" name="campoCriaPost"/>
+    <button type="submit">Postar</button>
+</form>
+<ul class="listaDePost">
+
+</ul>
+
+
+<script>
+    const $meuForm = document.querySelector('form') 
+
+    let miniRedeSocial = {
+        usuarios: [
+            {
+                username: 'aliceferreira',
+            }
+        ],
+        posts: [
+            {
+                id: '',
+                owner: '',
+                content: ''
+            }
+        ]
+    }
+
+    $meuForm.addEventListener('submit', function criaPostController(infosDoEvento){
+        infosDoEvento.preventDefault();
+
+        const $campoCriaPost = document.querySelector('input[name="campoCriaPost"]')
+        
+        const $listaDePost = document.querySelector('.listaDePost')
+        $listaDePost.insertAdjacentHTML('afterbegin', `<li>${$campoCriaPost.value}</li>`)
+
+        miniRedeSocial.posts.push({
+            id: miniRedeSocial.posts.length + 1,
+            owner: 'aliceferreira',
+            content: $campoCriaPost.value
+        });
+
+        //guardando na memoria do navegador
+        let objetoString = JSON.stringify(miniRedeSocial)
+        localStorage.setItem('dadosDaMiniRede', objetoString)
+
+        //Recuperando string JSON do Local Storange
+        let objetoStringRecuperado = localStorage.getItem('dadosDaMiniRede')
+
+        //Covertendo a string JSON de volta para um objeto
+        let miniRedeSocialRecuperada = JSON.parse(objetoStringRecuperado)
+
+        $campoCriaPost.value = ''
+
+
+    })
+</script>

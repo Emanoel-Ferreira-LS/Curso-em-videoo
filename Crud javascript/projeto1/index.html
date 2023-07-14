@@ -1,0 +1,91 @@
+<!--A tag form tem um comportamento padrão de tentar enviaar as informações dos forms para sua url quando se clica no botão ou dar enter, por isso ela sempre recarrega e exclui todas as informações-->
+
+<form>
+    <input placeholder="digite seu post" name="campoCriaPost"/>
+    <button type="submit">Postar</button>
+</form>
+<ul class="listaDePost">
+
+</ul>
+
+
+<script>
+    console.log("olá")
+
+    //[Base de Dados Nossa]:
+//.............................................................................................................
+    const miniRedeSocial = {
+    usuarios: [
+        {
+            username: 'omariosouto',
+        }
+    ],
+    posts: [
+        {
+            id: 1,
+            owner: 'omariosouto',
+            content: 'Meu primeiro tweet'
+        }
+    ],
+    // CREATE
+    criaPost(dados) {
+        miniRedeSocial.posts.push({
+            id: miniRedeSocial.posts.length + 1,
+            owner: dados.owner,
+            content: dados.content
+        });
+        const $listaDePost = document.querySelector('.listaDePost')
+        $listaDePost.insertAdjacentHTML('afterbegin', `<li>${dados.content}</li>`)
+    }
+    
+};
+
+
+    
+
+
+
+    //[código front-end: web]:
+//.............................................................................................................
+    
+    //$ antes da variavel é uma convenção para dizer que essa variavel guarda um elemento
+    const $meuForm = document.querySelector('form') 
+    console.log($meuForm)
+
+
+
+    //escutador de enevnto do tipo submit
+    $meuForm.addEventListener('submit', function criaPostController(infosDoEvento){
+        infosDoEvento.preventDefault();//previne a ação padrão que ia acontecer
+        console.log("estamos criando um novo post")
+        const $campoCriaPost = document.querySelector('input[name="campoCriaPost"]')//pega o input de acordo com o campo
+        //pegando o elemento ul pelo nome da classe
+
+       // alert($campoCriaPost.value)//alerta com o valor do campoCriaPost
+       miniRedeSocial.posts.push({
+            owner: 'emanoelferreira', content: $campoCriaPost.value
+        })
+        console.log(miniRedeSocial.posts)
+
+       //ou:    $listaDePost.insertAdjacentHTML('afterbegin', `<li>${$campoCriaPost.value}</li>`)
+
+       /*
+        element.insertAdjacentHTML(posição, texto);
+        Posição é a posição em relação ao elemento, e deve ser um dos seguintes tipos:
+
+        'beforebegin'
+        Antes do elemento.
+
+        'afterbegin'
+        Dentro do elemento, antes de seu primeiro filho (childNode).
+
+        'beforeend'
+        Dentro do elemento, após seu último filho (childNode).
+
+        'afterend'
+        Após o elemento.
+       */
+
+
+    })
+</script>

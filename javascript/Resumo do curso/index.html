@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Resumo do Curso</title>
+    </head>
+    <body>
+        <div></div>
+    </body>
+    <script>
+        console.log("Olá, mundo")//exibe no console
+        window.alert("Alerta na tela com opção de ok")
+        window.confirm("Alerta com confrmação")
+        window.prompt("Campo de digitação para o usuário")
+        document.write("Escrevendo dentro do documento html")
+
+        //[como declarar uma a varialvel e  definir seu valor]:
+            var minhaVariavel = 0 
+            var minhaVariavel1 = 1
+            var $minhaVariavel = document.getElementById('elemento')//pode iniciar com $. Geralmente utilizado quando uma variavel recebe um elemento html, mas isso não é regra e sim uma convenção
+
+            minhaVariavel = 2 //minha variavel recebe um novo valor
+            minhaVariavel = null //minha variavel recebe um valor nulo  
+
+        //[Tipos de variaveis]:
+            var a1 = 1 //number(inteiro)
+            var a2 = 1.5 //number(real)
+            var numberString = '2' //string
+            var minhaString = 'olá' //string
+            var euSouLindo = true //boolean(verdadeiro ou falso)
+            var minhaArray = [1,2,3,4] //object(array ou vetor)
+            var meuObjeto = {nome:'Emanoel', Altura: 1.75} //object(objeto)
+            var soma = function minhaFuncao(parametros){ //function(que tambem é um tipo primitivo)
+                return parametros + 1
+            }
+
+        //[Tratamento de dados]:
+            var nome = window.prompt("Qual é o seu nome?")//variavel nome recebe o nome digitado pelo usuário
+            window.alert("Olá "+nome+", é um prazer te conhecer")//concatenação
+            window.alert(`Olá ${nome}, tudo bem?`)//forma simplificada de concatenação
+
+            var num1 = window.prompt("digite um numero:")//recebe valor em string
+            var num2 = window.prompt("digite outro numero:")
+            
+            //[Convertendo para NUMBER]
+            num1 = Number.parseInt(num1)//convertendo valor para um numero inteiro
+            num2 = Number.parseFloat(num2)//convertendo para um numero real. Ou:
+            num2 = parseFloat(num2)//forma simplificada
+            num2 = Number(num2)//O JS decide pra qual tipo: float ou int
+    
+            num2 = parseFloat(window.prompt("digite outro numero:"))//convertendo diretamente
+
+            //[TRATAMENTO DE DADOS PARA STRING]
+            num2 = String(num2)//convertendo de volta para string
+            num2 = num2.toString()//convertendo de volta para string
+            num2 = num2.length//contando o tanto de caracteres(tamanho da string)
+            num2 = num2.toUpperCase()//coloca todas as letras em maiusculas
+            num2 = num2.toLowerCase//tupo para minusculas
+
+            //[TRATAMENTO DE DADOS PARA NUMBER]
+            var n1 = 1.2434345
+            n1 = n1.toFixed(2)//fixo o numero em duas casas
+            n1 = n1.toFixed(2).replace('.',',')//troco o ponto por virgula
+            n1 = n1.toLocaleString('pt-BR', {style: 'currency', currency:'BRL'})//objeto que localiza o valor monetario para o Brasil
+            n1 = n1.toLocaleString('pt-BR', {style: 'currency', currency:'USD'})//em Dollar
+            n1 = n1.toLocaleString('pt-BR', {style: 'currency', currency:'EUR'})//em Euro
+
+
+//...................................................................................................
+        //[INTRODUÇÃO AO DOM(Document Object Model) ou Modelo de Objetos para Documentos]:
+                window.document.write("Ola, mundo")//escrevendo na tela
+                window.document.write(window.document.URL)
+                window.document.write(window.navigator.appName)//nome do Navegador
+                window.document.write(window.document.charset)
+
+        //[Selecionando Elementos]:
+                document.getElementsByTagName('body')//selecionando uma tag
+                var p1 = document.getElementsByTagName('p')[1]//p1 recebe a segunda tag p definido por [1]
+                window.document.write(p1.innerText)//escrevo na tela só o texto dentro de p1 
+                window.document.write(p1.innerHTML)//escrevo na tela o texto dentro de p1 com formatação, pega o HTML inteiro junto com as tags filhas
+                p1.style.color = 'blue' //mudei o estilo de com do paragrafo para azul
+
+                document.getElementById('nomeDoId')//por id
+                document.getElementsByClassName('nomeDaClass')//pela classe
+                document.getElementsByTagName('nomeDaTag')//nome da tag, caso seja tag unica
+                document.getElementsByTagName('nomeDaTag')[0]//nome e posição da tag que vai de 0 à ...
+                document.getElementsByName('nameDoElemento')//por name, ex: <input name="meuInput"/>
+                document.querySelector(".minhaClass")//por seletor: se for id usa o '#nomeId'; se for class usa '.nomeClass'
+
+
+            
+
+
+
+
+
+    </script>
+</html>

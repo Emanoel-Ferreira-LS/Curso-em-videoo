@@ -1,0 +1,55 @@
+<form>
+    <input placeholder="digite seu post" name="campoCriaPost" />
+    <button type="submit">Postar</button>
+</form>
+<ul class="listaDePost">
+
+</ul>
+
+<script>
+    const $meuForm = document.querySelector('form');
+    const $campoCriaPost = document.querySelector('input[name="campoCriaPost"]');
+    const $listaDePost = document.querySelector('.listaDePost');
+
+    let miniRedeSocial = {
+        usuarios: [
+            {
+                username: 'aliceferreira',
+            }
+        ],
+        posts: []
+    };
+
+    // Recupera os dados do Local Storage ao carregar a página
+    window.addEventListener('load', function() {
+        const postsString = localStorage.getItem('miniRedeSocialPosts');
+        if (postsString) {
+            miniRedeSocial.posts = JSON.parse(postsString);
+            renderizarPosts();
+        }
+    });
+
+    $meuForm.addEventListener('submit', function criaPostController(infosDoEvento) {
+        infosDoEvento.preventDefault();
+
+        $listaDePost.insertAdjacentHTML('afterbegin', `<li>${$campoCriaPost.value}</li>`);
+
+        miniRedeSocial.posts.push({
+            id: miniRedeSocial.posts.length + 1,
+            owner: 'aliceferreira',
+            content: $campoCriaPost.value
+        });
+
+        // Armazena os dados no Local Storage
+        localStorage.setItem('miniRedeSocialPosts', JSON.stringify(miniRedeSocial.posts));
+
+        $campoCriaPost.value = '';
+    });
+
+    function renderizarPosts() {
+        $listaDePost.innerHTML = '';
+        miniRedeSocial.posts.forEach(function(post) {
+            $listaDePost.insertAdjacentHTML('afterbegin', `<li>${post.content}</li>`);
+        });
+    }
+</script>
