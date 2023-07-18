@@ -5,9 +5,16 @@
     padding: 0px;
 }
 
+:root{
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --font2: 'Belanosima', sans-serif;
+    --font3: 'Dancing Script', cursive;
+}
+
 html, body{
     min-height: 100vh; /*Defino a altura minima do meu body como 100% da altura da tela*/
     background-color: dark;
+    font-family: var(--font1);
 }
 
 header{
@@ -20,6 +27,8 @@ header > h1{
     /*text-transform: uppercase;*/ /*Deixa as letras todas em MAIUSCULAS*/
     font-variant: small-caps; /*Deixa todas em maiusculas mas a primeira letra fica maior*/
     padding-top: 50px;
+    font-family: var(--font2);
+    font-size: 7vw;
 }
 
 header > p{
@@ -40,7 +49,9 @@ section{
     padding-top: 10vh;
     padding-bottom: 10vh;
     padding-left: 30px;
-    line-height: 2em; /*Espaçamento entre as linhas*/
+    line-height: 1.5em; /*Espaçamento entre as linhas*/
+    font-family: var(--font3);
+    font-size: 4vw;
 }
 
 section.normal{
@@ -51,12 +62,25 @@ section.normal{
 section.imagem{
     background-color: rgba(0, 0, 0, 0.589);
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.432);
+    background-attachment: fixed;
+    background-position: right center;
+    background-size: cover;
 }
 
 section.imagem > p{
-    width: 400px;
-    background-color: rgba(0, 0, 0, 0.253);
+    background-color: rgba(0, 0, 0, 0.651);
+    display: inline-block;
+    padding: 10px;
+    text-shadow: 2px 2px 0px black;
+}
 
+section#img01{
+    background-image: url(imagens/background001.jpg);
+}
+
+section#img02{
+    background-image: url(imagens/background002.jpg);
 }
 
 footer{
@@ -64,4 +88,6 @@ footer{
     text-align: center;
     color: white;
     padding: 10px;
+    font-family: var(--font1);
+    font-size: 2vw;
 }
