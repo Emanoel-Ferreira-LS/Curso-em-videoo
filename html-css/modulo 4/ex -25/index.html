@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu Formulario</h1>
+    <form action="cadastro.php" autocomplete="off">
+        <p>Nome:
+             <input type="text" name="nome" id="nome">
+        </p>
+        <p>sobrenome:
+             <input type="text" name="sobrenome" id="sobrenome">
+            </p>
+        <p><input type="submit" value="enviar"></p>
+    </form>
+
+    <!--Usando label-->
+    <!--name: mais util para html e php-->
+    <!--id: js e css-->
+
+    <form action="cadastro.php" autocomplete="off">
+        <p><label for="inome">Nome:</label>
+             <input type="text" name="nome" id="inome">
+        </p>
+        <p><label for="isobrenome">sobrenome:</label>
+             <input type="password" name="sobrenome" id="isobrenome">
+            </p>
+        <p><input type="submit" value="enviar"></p>
+        <!--as informaçõe ficam espostas na barra de pesquisa do navegador-->
+    </form>
+
+    <!--METODO GET E SET:
+        GET: metodo padrão, usa quando os dados não forão sensiveis, ex: buscas no google, pesquisa, não são senhas, etc. URL é compartilhavel.Envia no maximo 3000 bytes. Não envia outros tipos de arquivos que não seja texto;
+        POST: Dados sensiveis,não quero que os dados não aparecem na URL, se os dados tiverem + de 3000 dados, envio de arquivos que não seja textos;
+    -->
+
+    <form action="cadastro.php" method="post">
+        <p>
+            <label for="iusu">Usuário:</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="30" placeholder="nome do usuario" autocomplete="username"><!--required: obrigatorio;    placeholder: dica de texto;    autocomplete dentro do input: varias opções dos tipos de campos; -->
+        </p>
+        <p>
+        
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="30" size="10">  <!--minlength: quantidade minima de caracteres;     maxlength: maximo de caractere;   size: tamanho da caixa, quantos caracteres ele vai exibir  -->
+        </p>
+
+        <p>
+            <label for="inota">Nota:</label>
+            <input type="number" name="nota" id="inota" min="0" max="100" placeholder="0 à 100" step="0.5" value="1"><!--step: passos, de quanto em quanto o valor deve aumentar;   value: valor que já vai estar preenchido como opção-->
+        </p>
+
+        <p>
+            <label for="imes">Periodo Letivo:</label>
+            <input type="month" name="mes" id="imes" value="2023-07" ><!-- value: sugere uma data já que segue a ordem: ano-mes;-->
+        </p>
+
+        <p>
+            <label for="idata">Data da prova</label>
+            <input type="date" name="data" id="idata" value="2023-07-21"><!-- value: sugere uma data já que segue a ordem: ano-mes-dia;-->
+        </p>
+        <p>
+            <label for="ihora">Hora importante</label>
+            <input type="time" name="hora" id="ihora"> <strong>17:15</strong>
+        </p>
+
+        <input type="submit" value="enviar">
+        <input type="reset" value="limpar">
+
+        <!--Verificar se é compativel com outros navegadores-->
+
+    </form>
+
+    <h1>Form 02</h1>
+    <form action="form.php">
+        <p>
+            <label for="iemail">Email:</label>
+            <input type="email" name="email" id="iemail" required>
+        </p>
+        <p>
+            <label for="itel">Telefone:</label>
+            <input type="tel" name="tel" id="itel" required>
+        </p>
+    </form>
+</body>
+</html>
