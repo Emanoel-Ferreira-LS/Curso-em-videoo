@@ -54,6 +54,25 @@
             <input type="password" name="sen" id="isen" required minlength="8" maxlength="30" size="10">  <!--minlength: quantidade minima de caracteres;     maxlength: maximo de caractere;   size: tamanho da caixa, quantos caracteres ele vai exibir  -->
         </p>
 
+        <p>
+            <label for="inota">Nota:</label>
+            <input type="number" name="nota" id="inota" min="0" max="100" placeholder="0 à 100" step="0.5" value="1"><!--step: passos, de quanto em quanto o valor deve aumentar;   value: valor que já vai estar preenchido como opção-->
+        </p>
+
+        <p>
+            <label for="imes">Periodo Letivo:</label>
+            <input type="month" name="mes" id="imes" value="2023-07" ><!-- value: sugere uma data já que segue a ordem: ano-mes;-->
+        </p>
+
+        <p>
+            <label for="idata">Data da prova</label>
+            <input type="date" name="data" id="idata" value="2023-07-21"><!-- value: sugere uma data já que segue a ordem: ano-mes-dia;-->
+        </p>
+        <p>
+            <label for="ihora">Hora importante</label>
+            <input type="time" name="hora" id="ihora"> <strong>17:15</strong>
+        </p>
+
         <input type="submit" value="enviar">
         <input type="reset" value="limpar">
     </form>
