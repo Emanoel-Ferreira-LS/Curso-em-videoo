@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outros comandos</title>
+</head>
+<body>
+    <h1>Exemplo de formulario</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estadi" id="iest">
+                <option value="" selected>--Escolha--</option>
+                <optgroup label="região sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de janeiro</option>
+                    <option value="MG">Minas gerais</option>
+                </optgroup>
+                <optgroup label="região nordeste">
+                    <option value="PE">Pernambuco</option>
+                    <option value="PB">Paraiba</option>
+                    <option value="CE">Ceará</option>
+                </optgroup>
+                <optgroup label="região norte">
+                    <option value="AM">Amazonas</option>
+                    <option value="PA">Pará</option>
+                </optgroup>
+                <optgroup label="região sul">
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+                <optgroup label="região centro-oeste">
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MT">Mato Grosso</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão</label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contabilista</option>
+                <option value="DEV">Desenvolvimento</option>
+            </datalist>
+            <!--Sugere opções mas tambem permite que o usuario digite outra opção
+            Para que o input do tipo text fique ligado ao datalist, é preciso que o datalist receba um ID e o input do tipo text e nele o atributo list receba o ID do datalist-->
+        </p>
+
+        <p>
+            <label for="imsg">mensagem:</label><br>
+            <textarea name="msg" id="imsg" cols="5" rows="20"></textarea>
+            <!--defino a quantidade de linhas e colunas visiveis, mas não limita o tamanho do conteudo-->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+
+    </form>
+</body>
+</html>
