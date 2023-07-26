@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <meta lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Radio e Checkbox</title>
+    </head>
+    <body>
+        <form action="cadastro.php" method="post">
+            <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" name="sex" id="isexmax" checked><label for="isexmax">Masculino</label>
+                <input type="radio" name="sex" id="isexfem"><label for="isexfem">Feminino</label>
+                <!--
+                    *input do tipo radio: são bolinhas de seleção que gerelamente são usadas para marcar uma só opção. Tambem é importante o uso do label.
+
+                    *ATENÇÂO: para que seja clicavel UMA OU OUTRA opção, elas tem q fazer parte de um mesmo grupo, é preciso elas ter o mesmo NAME=""(só o name, não o ID)
+                    
+                    *Para que uma opção já fique uma opção selecionada basta colocar o atributo 'checked' dentro do <input> desejado
+                -->
+            </fieldset>
+            <fieldset>
+                <legend>Chekbox - Esportes favoritos</legend>
+                <input type="checkbox" name="espFut" id="iespFut"><label for="iespFut">Futebol</label>
+                <input type="checkbox" name="espBas" id="iespBas"><label for="iespBas">Basquete</label>
+                <input type="checkbox" name="espNat" id="iespNat"><label for="iespNat">Natação</label>
+                <input type="checkbox" name="espTen" id="iespTen"><label for="iespTen">Tênis</label>
+                <input type="checkbox" name="espVol" id="iespVol"><label for="iespVol">Vôlei</label>
+                <!--input do tipo checkbox: são caixas de seleção onde é possivel marcar mais de uma opção.
+                OBS: É importante o uso do <label> com atributo for="" para facilitar a seleção da caixa
+                -->
+            </fieldset>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+    </body>
+</html>
