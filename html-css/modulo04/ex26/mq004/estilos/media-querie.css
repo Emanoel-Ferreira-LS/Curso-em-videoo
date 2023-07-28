@@ -23,6 +23,7 @@ Telas grandes: mais que 1200px
 
     h1{
         color: black;
+        font-size: 2em;
     }
 
     #phone{
@@ -53,12 +54,19 @@ Telas grandes: mais que 1200px
         content: 'Essa página foi impressa do site www.emanoel-ferreira-ls.com';
     }
 
+    img{
+        width: 40%;
+    }
 }
 
 /*Tablets*/
 @media screen and (min-width: 768px) and (max-width: 992px) {
     body{
         background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    h1{
+        font-size: 1.5em;
     }
 
     #phone{
@@ -79,6 +87,10 @@ Telas grandes: mais que 1200px
     
     #tv{
         display: none;
+    }
+
+    img{
+        width: 30%;
     }
 }
 
@@ -88,6 +100,10 @@ Telas grandes: mais que 1200px
         background-image: url(../imagens/back-pc.jpg);
     }
 
+    h1{
+        font-size: 1.8em;
+    }
+
     #phone{
         display: none;
     }
@@ -106,6 +122,10 @@ Telas grandes: mais que 1200px
     
     #tv{
         display: none;
+    }
+
+    img{
+        width: 20%;
     }
 }
 
@@ -115,6 +135,10 @@ Telas grandes: mais que 1200px
         background-image: url(../imagens/back-tv.jpg);
     }
 
+    h1{
+        font-size: 2em;
+    }
+
     #phone{
         display: none;
     }
@@ -133,5 +157,9 @@ Telas grandes: mais que 1200px
     
     #tv{
         display: block;
+    }
+
+    img{
+        width: 10%;
     }
 }
