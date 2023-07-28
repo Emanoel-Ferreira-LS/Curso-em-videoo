@@ -1,0 +1,42 @@
+@charset "UTF_8";
+
+/*Versão para outras mídias*/
+
+/*Typical Device Breakpoints
+---------------------------------
+Telas pequenas: menores que 600px
+Telas smartphones: 600 à 768px
+Tablets: 768px à 992px
+Desktops: 992px à 1200px
+Telas grandes: mais que 1200px
+---------------------------------
+*/
+
+@media screen and (min-width: 992px) {
+    #iburguer{
+        display: none;
+    }
+
+    header > h1{
+        font-size: 2.5em;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    #menu li{
+        display: inline-block;
+        width: 10%;
+    }
+
+    main{
+        width: 992px;
+    }/*Posso fazer assim, ou definir um max-width: 992px do main no estilo principal*/
+
+    main h2{
+        font-size: 2em;
+    }
+
+}
+
